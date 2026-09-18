@@ -1,0 +1,29 @@
+---
+description: Discipline DTF Maintenance Controller — faits, phases, sûreté machine
+alwaysApply: true
+---
+
+# DTF Maintenance Controller
+
+Projet d’entretien automatique d’une Inkone DM3 via Hosonsoft / PrintExp. Priorité : intégrité de l’imprimante.
+
+## Faits
+
+Marquer toute affirmation : **HYPOTHÈSE**, **OBSERVÉ**, ou **CONFIRMÉ**.
+Ne jamais promouvoir une hypothèse en fait. `192.168.127.10` et TCP `5001` sont des hypothèses jusqu’à vérification sur le PC DTF.
+
+## Phases
+
+- A Observer (lecture seule) → B Automatiser Hosonsoft (V0) → C captures isolées → D client protocole.
+- Ne pas envoyer de commande inconnue à l’imprimante.
+- Ne pas implémenter `src/hoson/` avant commandes clairement identifiées.
+- Une V0 qui pilote Hosonsoft est un succès. Pas de RIP maison.
+
+## Sûreté
+
+- Distinguer READ ONLY et ACTIVE COMMAND.
+- `dry-run` / `simulation` / `machine_busy` / `require_idle`.
+- Jamais de maintenance pendant une impression utilisateur.
+- Timeout = abandon, pas relance mécanique.
+- Questions Product Owner : une seule à la fois.
+- Répondre en français.

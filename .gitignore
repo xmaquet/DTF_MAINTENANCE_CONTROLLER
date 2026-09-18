@@ -1,0 +1,13 @@
+logs/
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.pcap
+*.pcapng
+captures/*.pcap
+captures/*.pcapng

@@ -1,0 +1,5 @@
+[15:28:04.602][软件][调试][000000] 作业ERASMART Quality Evaluation.prn
+[15:28:04.790][软件][调试][000000] 启动任务：ERASMART Quality Evaluation.prn
+[15:28:04.993][软件][调试][000000] 作业ERASMART Quality Evaluation.prn
+[15:31:56.376][软件][调试][000000] 作业ERASMART Quality Evaluation.prn
+[15:31:56.376][软件][调试][000000] ERASMART Quality Evaluation.prn

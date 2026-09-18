@@ -1,0 +1,21 @@
+# DTF Maintenance Controller — config (PC imprimante)
+# Ne jamais viser 192.168.127.10 depuis un client expérimental.
+
+controller:
+  require_ui: true          # pas d'UI = pas de maintenance
+  dry_run: true             # V0 : décider et journaliser, ne pas cliquer
+  slot_hour: 20
+  slot_minute: 0
+  strong_idle_days: 3
+
+paths:
+  printexp_exe: "C:\\InkONE\\PrintExp_X64_5.8.1.1.29_Unicode_20240508\\PrintExp_X64.exe"
+  printexp_log_dir: "C:\\InkONE\\PrintExp_X64_5.8.1.1.29_Unicode_20240508\\Log\\main"
+  inkone_prnlist: "C:\\Program Files (x86)\\InkOne\\PrnList"
+  inkone_jobs: "C:\\Program Files (x86)\\InkOne\\Jobs"
+
+safety:
+  require_idle: true
+  never_click_without_ui: true
+  allow_weak: false
+  max_clean_per_day: 1

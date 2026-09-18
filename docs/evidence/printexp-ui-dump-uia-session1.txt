@@ -1,0 +1,7 @@
+﻿timestamp=2026-09-18 18:31:34
+session=1
+pid=23912 session=1 title='PrintExp' hwnd=985482
+windows_for_pid=1
+---- window ----
+ControlType.Window name='PrintExp' id='' class='#32770' enabled=True
+---- name matches Clean|Check|Weak|Normal|Strong|Flash ----
