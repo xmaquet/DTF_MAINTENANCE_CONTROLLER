@@ -7,12 +7,14 @@ controller:
   slot_hour: 20
   slot_minute: 0
   strong_idle_days: 3
+  clean_level: auto         # auto | normal | strong — Weak jamais en auto
 
 paths:
   printexp_exe: "C:\\InkONE\\PrintExp_X64_5.8.1.1.29_Unicode_20240508\\PrintExp_X64.exe"
   printexp_log_dir: "C:\\InkONE\\PrintExp_X64_5.8.1.1.29_Unicode_20240508\\Log\\main"
   inkone_prnlist: "C:\\Program Files (x86)\\InkOne\\PrnList"
   inkone_jobs: "C:\\Program Files (x86)\\InkOne\\Jobs"
+  maintenance_prn: ""       # à désigner dans l'UI — fichier pas encore défini
 
 safety:
   require_idle: true

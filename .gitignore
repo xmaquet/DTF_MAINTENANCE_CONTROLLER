@@ -11,3 +11,4 @@ venv/
 *.pcapng
 captures/*.pcap
 captures/*.pcapng
+config/user.yaml

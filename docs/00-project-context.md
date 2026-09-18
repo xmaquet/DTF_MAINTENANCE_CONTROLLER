@@ -163,7 +163,9 @@ Deux postes distincts sont prévus.
 
 **Politique entretien (DÉCLARÉ PO) :** tous les jours 20:00 ; sauter si print en cours ou print du jour (InkOne **ou** `.prn` PrintExp) ; Check/Clean ne sautent pas ; sinon Clean normal (strong si 3 j sans print) puis Check.
 
-**Gel métier + runtime PO :** UI Python obligatoire sur le PC DTF ; voir [05-v0-dry-run-plan.md](05-v0-dry-run-plan.md). Python 3.13.7 **OBSERVÉ**. Fenêtre dry-run ouverte **DÉCLARÉ (PO)** 2026-09-18 18:25. **PrintExp absent = refus V0, pas de repli carte** (**CONFIRMÉ PO**).
+**DÉCLARÉ (PO) 2026-09-18 :** le `.prn` d’entretien sera défini **plus tard**, désignable dans l’UI (Paramètres). Heure du créneau et séquence / niveau de Clean (Auto, Normal, Strong) aussi paramétrables. Weak jamais auto.
+
+**Gel métier + runtime PO :** UI Python **PySide6** obligatoire sur le PC DTF ; voir [05-v0-dry-run-plan.md](05-v0-dry-run-plan.md). Python 3.13.7 **OBSERVÉ**. Fenêtre dry-run ouverte **DÉCLARÉ (PO)** 2026-09-18 18:25. **PrintExp absent = refus V0, pas de repli carte** (**CONFIRMÉ PO**).
 
 ---
 

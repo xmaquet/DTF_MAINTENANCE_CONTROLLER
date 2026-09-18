@@ -59,6 +59,18 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual((datetime(2026, 9, 18).date() - datetime(2026, 9, 15).date()).days, 3)
         self.assertEqual(d.action, Action.WOULD_CLEAN_STRONG)
 
+    def test_force_normal(self):
+        d = self._base(last_user_print=datetime(2026, 9, 15, 10, 0), clean_level="normal")
+        self.assertEqual(d.action, Action.WOULD_CLEAN_NORMAL)
+
+    def test_force_strong(self):
+        d = self._base(last_user_print=datetime(2026, 9, 17, 21, 13), clean_level="strong")
+        self.assertEqual(d.action, Action.WOULD_CLEAN_STRONG)
+
+    def test_force_does_not_override_print_today(self):
+        d = self._base(last_user_print=datetime(2026, 9, 18, 15, 28), clean_level="strong")
+        self.assertEqual(d.action, Action.SKIP)
+
 
 if __name__ == "__main__":
     unittest.main()

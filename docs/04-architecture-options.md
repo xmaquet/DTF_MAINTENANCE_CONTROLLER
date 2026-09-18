@@ -33,7 +33,7 @@ Cette arborescence est un **objectif de structuration**. Elle ne justifie pas d�
 
 ## 2. Modes d’exécution
 
-**DÉCLARÉ (PO) 2026-09-18 :** le controller tourne dans une **UI Python sur le PC DTF**. **Pas d’UI = pas de maintenance.** Pas de service Session 0, pas de tâche invisible.
+**DÉCLARÉ (PO) 2026-09-18 :** le controller tourne dans une **UI Python PySide6** sur le PC DTF. **Pas d’UI = pas de maintenance.** Pas de service Session 0, pas de tâche invisible. (La fenêtre Tk de ce soir reste valable jusqu’au tick 20:00 ; la suite est PySide6.)
 
 La V0 s’exécute dans la session console (PrintExp est en session 1 ; SSH session 0 ne voit pas l’UI).
 

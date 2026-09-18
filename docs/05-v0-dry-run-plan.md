@@ -6,6 +6,8 @@
 
 **CONFIRMÉ PO :** PrintExp absent → **refus V0**, pas de repli carte. Jamais UI PrintExp **et** TCP carte en même temps.
 
+**DÉCLARÉ (PO) :** `.prn` maintenance **à définir plus tard**, choisissable dans Paramètres. Horaires et niveau Clean (auto / Normal / Strong) paramétrables dans l’UI. Weak jamais auto.
+
 ---
 
 ## 1. Règle gelée
@@ -106,7 +108,7 @@ Jour sans print (futur) :
 3. Revue Vérificateur.
 4. Premier clic réel : seulement après validation PO.
 
-**Runtime (gel PO) :** une fenêtre Python sur le bureau du PC DTF. Fermer la fenêtre inhibe toute maintenance. `dry_run: true` : décision + log, **aucun clic**.
+**Runtime (gel PO) :** une fenêtre **PySide6** sur le bureau du PC DTF. Fermer la fenêtre inhibe toute maintenance. `dry_run: true` : décision + log, **aucun clic**.
 
 Controller copié : `C:\Users\User\DTF_Maintenance_Controller\`  
 Lancer **sur le bureau** (pas SSH) :

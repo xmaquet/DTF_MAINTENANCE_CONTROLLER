@@ -31,6 +31,7 @@ def decide(
     last_user_print: datetime | None,
     strong_idle_days: int,
     printexp_running: bool = True,
+    clean_level: str = "auto",
 ) -> Decision:
     if not ui_alive:
         return Decision(Action.SKIP, "pas d'UI controller = pas de maintenance", now)
@@ -49,7 +50,14 @@ def decide(
             now,
         )
     idle_days = _idle_days(now.date(), last_user_print)
-    if idle_days >= strong_idle_days:
+    level = (clean_level or "auto").lower()
+    if level == "strong":
+        action = Action.WOULD_CLEAN_STRONG
+        reason = "niveau forcé STRONG puis Check"
+    elif level == "normal":
+        action = Action.WOULD_CLEAN_NORMAL
+        reason = "niveau forcé NORMAL puis Check"
+    elif idle_days >= strong_idle_days:
         action = Action.WOULD_CLEAN_STRONG
         reason = f"{idle_days} j sans print utilisateur → Clean STRONG puis Check"
     else:

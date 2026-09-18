@@ -22,16 +22,18 @@ Les faits sont marqués **HYPOTHÈSE**, **OBSERVÉ** ou **CONFIRMÉ**. Les adres
 | [docs/01-system-inventory.md](docs/01-system-inventory.md) | Inventaire (très majoritairement à confirmer) |
 | [docs/02-investigation-plan.md](docs/02-investigation-plan.md) | Plan d’investigation Phase A |
 | [docs/03-risk-register.md](docs/03-risk-register.md) | Risques machine et sûreté |
+| [docs/04-architecture-options.md](docs/04-architecture-options.md) | Options V0 / V1 / V2 ; UI PySide6 |
 | [docs/05-v0-dry-run-plan.md](docs/05-v0-dry-run-plan.md) | Plan V0 dry-run, gel métier 20:00 |
 
 ## Ce dépôt
 
 ## Lancer (dry-run)
 
-Sur le **PC DTF**, session bureau, Python 3 installé :
+Sur le **PC DTF**, session bureau, Python 3 :
 
 ```text
-python run_controller.py
+py -3 -m pip install -r requirements.txt
+py -3 C:\Users\User\DTF_Maintenance_Controller\run_controller.py
 ```
 
-**Pas de fenêtre = pas de maintenance.** `dry_run` est à `true` : aucun clic PrintExp.
+UI : **PySide6**. **Pas de fenêtre = pas de maintenance.** `dry_run` est à `true` : aucun clic PrintExp.
